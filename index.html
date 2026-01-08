@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Store</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Online Store</h1>
+      <div class="filters">
+        <input type="text" id="search" placeholder="Search for products..." />
+
+        <select id="Categories">
+          <option>All Categories</option>
+          <option>electronics</option>
+          <option>women's clothing</option>
+          <option>men's clothing</option>
+          <option>jewelery</option>
+        </select>
+        <input type="number" id="min" placeholder="Min Price" />
+        <input type="number" id="max" placeholder="Max Price" />
+        <select id="sort" class="sort">
+          <option value="price">Sort by Price</option>
+          <option value="name">Sort by Name</option>
+          <option value="rating">Sort by Rating</option>
+        </select>
+        <button id="apply">Apply Filters</button>
+        <button id="reset">Clear Filters</button>
+      </div>
+    </header>
+
+    <section class="header">
+      <h2>Shopping Cart 🛒</h2>
+    </section>
+    <section class="cart">
+      <div class="cart-container">
+        <p>Add Products to your Cart</p>
+      </div>
+      <div class="cart-total"></div>
+      <div class="cart-quantity"></div>
+    </section>
+
+    <main class="products">
+      <div class="products-container"></div>
+    </main>
+
+    <div class="popup-overlay" id="popup">
+      <div class="popup-content">
+        <span class="close-btn" id="closePopup">&times;</span>
+        <img id="popup-img" src="" alt="Product Image" />
+        <h2 id="popup-title"></h2>
+        <p id="popup-price"></p>
+        <p id="popup-desc"></p>
+        <p id="popup-rating"></p>
+      </div>
+    </div>
+
+    <footer class="pagination">
+      <button>Previous</button>
+      <button class="active">1</button>
+      <button>2</button>
+      <button>3</button>
+      <button>4</button>
+      <button>Next</button>
+    </footer>
+
+    <script src="index.js"></script>
+  </body>
+</html>
